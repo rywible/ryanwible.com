@@ -6,7 +6,10 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed for Ryan Wible" href="/rss.xml" />
+</svelte:head>
 
 <div
 	class="flex h-screen w-full flex-col overflow-hidden selection:bg-moonlight selection:text-midnight"
@@ -70,7 +73,7 @@
 
 	<!-- Footer / External Links -->
 	<div class="z-50 mx-auto w-full max-w-3xl flex-none px-6 md:px-12">
-		<footer class="fade-in py-6 text-center md:py-8">
+		<footer class="fade-in flex justify-center gap-4 py-6 md:py-8">
 			<a
 				href="https://github.com/rywible"
 				target="_blank"
@@ -78,6 +81,13 @@
 				class="font-sans text-[10px] tracking-[0.3em] uppercase opacity-40 transition-all duration-500 hover:text-moonlight hover:opacity-100"
 			>
 				Github
+			</a>
+			<a
+				href="/rss.xml"
+				target="_blank"
+				class="font-sans text-[10px] tracking-[0.3em] uppercase opacity-40 transition-all duration-500 hover:text-moonlight hover:opacity-100"
+			>
+				RSS
 			</a>
 		</footer>
 	</div>
