@@ -1,5 +1,17 @@
 <script>
 	import { fade } from 'svelte/transition';
+    import { onMount } from 'svelte';
+
+    let isOpen = $state(false);
+
+    onMount(() => {
+        // If device has no hover capability (mobile/tablet), open automatically
+        if (window.matchMedia('(hover: none)').matches) {
+            setTimeout(() => {
+                isOpen = true;
+            }, 1000);
+        }
+    });
 </script>
 
 <svelte:head>
@@ -12,18 +24,19 @@
 	<a href="/blog" class="group relative cursor-pointer" aria-label="Enter Archive">
 		<!-- Door Container with Perspective -->
 		<!-- Added py-12 to ensure 3D elements don't get clipped vertically -->
-		<!-- Increased height to h-[26rem] and md:h-[30rem] to compensate for py-12 (6rem total) so the door remains h-80/h-96 visually -->
-		<div class="group relative h-[26rem] w-56 py-12 perspective-[1000px] md:h-[30rem] md:w-64">
+		<!-- Used viewport-relative height (h-[60vh]) with max-heights to ensure responsiveness on small screens -->
+		<!-- Used aspect-ratio to maintain the gate proportions without fixed widths -->
+		<div class="group relative h-[60vh] max-h-[26rem] w-auto aspect-[7/13] py-12 perspective-[1000px] md:max-h-[30rem]">
 			<!-- The Void Behind (Background) -->
 			<!-- Adjusted height to fit within the padding-less visual area -->
 			<div class="absolute inset-x-0 inset-y-12 flex items-end justify-center bg-midnight overflow-hidden">
                 <!-- Atmospheric Glow -->
 				<div
-					class="absolute bottom-0 h-full w-full bg-gradient-to-t from-moonlight/40 via-moonlight/15 to-transparent opacity-0 blur-sm transition-opacity delay-100 duration-1000 group-hover:opacity-100"
+					class="absolute bottom-0 h-full w-full bg-gradient-to-t from-moonlight/40 via-moonlight/15 to-transparent blur-sm transition-opacity delay-100 duration-1000 {isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}"
 				></div>
                 <!-- Core Intensity -->
                 <div
-					class="absolute bottom-0 h-1/2 w-3/4 bg-gradient-to-t from-parchment/10 via-moonlight/20 to-transparent opacity-0 blur-xl transition-opacity delay-100 duration-1000 group-hover:opacity-100"
+					class="absolute bottom-0 h-1/2 w-3/4 bg-gradient-to-t from-parchment/10 via-moonlight/20 to-transparent blur-xl transition-opacity delay-100 duration-1000 {isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}"
 				></div>
 			</div>
 
@@ -39,13 +52,13 @@
                 <!-- Increased border opacity to match the frame so it looks solid when closed -->
                 <div class="w-1/2 h-full bg-midnight border-y border-r border-parchment/20 
                             transition-transform duration-1000 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                            origin-left group-hover:[transform:rotateY(-25deg)]">
+                            origin-left {isOpen ? '[transform:rotateY(-25deg)]' : 'group-hover:[transform:rotateY(-25deg)]'}">
                 </div>
                 
                 <!-- Right Panel -->
                 <div class="w-1/2 h-full bg-midnight border-y border-l border-parchment/20 
                             transition-transform duration-1000 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                            origin-right group-hover:[transform:rotateY(25deg)]">
+                            origin-right {isOpen ? '[transform:rotateY(25deg)]' : 'group-hover:[transform:rotateY(25deg)]'}">
                 </div>
             </div>
 		</div>

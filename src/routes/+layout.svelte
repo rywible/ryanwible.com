@@ -13,14 +13,16 @@
 >
 	<!-- Header -->
 	<div class="mx-auto w-full max-w-3xl flex-none px-6 md:px-12">
-		<header class="fade-in flex items-baseline justify-between py-8 md:py-12">
+		<header class="fade-in flex items-baseline justify-between py-6 md:py-12">
 			<a
 				href="/"
-				class="font-serif text-xl tracking-wide transition-colors duration-300 hover:text-moonlight"
+				class="font-serif text-lg tracking-wide transition-colors duration-300 hover:text-moonlight md:text-xl"
 			>
 				RW
 			</a>
-			<nav class="flex gap-8 text-sm font-light tracking-widest uppercase opacity-80">
+			<nav
+				class="flex gap-6 text-xs font-light tracking-widest uppercase opacity-80 md:gap-8 md:text-sm"
+			>
 				<a
 					href="/"
 					class="group relative transition-colors duration-300 hover:text-moonlight {$page.url
@@ -68,7 +70,7 @@
 
 	<!-- Footer / External Links -->
 	<div class="z-50 mx-auto w-full max-w-3xl flex-none px-6 md:px-12">
-		<footer class="fade-in py-8 text-center">
+		<footer class="fade-in py-6 text-center md:py-8">
 			<a
 				href="https://github.com/rywible"
 				target="_blank"
