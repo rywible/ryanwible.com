@@ -7,10 +7,10 @@
 </svelte:head>
 
 <!-- Wrapper to handle scrolling within the fixed layout -->
-<div class="h-full overflow-y-auto pr-2 -mr-2 pb-20 fade-in-up">
-    <article class="mt-8 md:mt-12 mb-24">
+<div class="h-full overflow-y-auto pr-2 -mr-2 pb-4 fade-in-up">
+    <article class="mt-0 mb-4">
         <!-- Header -->
-        <header class="mb-16 md:mb-20 text-center">
+        <header class="mb-12 md:mb-16 text-center">
             <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight leading-tight text-parchment opacity-95">
                 {data.meta.title}
             </h1>
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Footer / Signature -->
-        <div class="mt-24 flex justify-center opacity-20">
+        <div class="mt-12 flex justify-center opacity-20">
             <span class="font-serif text-2xl">~</span>
         </div>
     </article>

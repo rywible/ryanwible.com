@@ -60,7 +60,7 @@
 	</div>
 
 	<main
-		class="relative mx-auto flex w-full max-w-3xl flex-1 flex-col overflow-hidden px-6 pb-12 md:px-12 {$page
+		class="relative mx-auto flex w-full max-w-3xl flex-1 flex-col overflow-hidden px-6 md:px-12 {$page
 			.url.pathname === '/'
 			? 'fade-in'
 			: 'fade-in-up'}"

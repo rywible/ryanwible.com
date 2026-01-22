@@ -18,10 +18,10 @@
             <article class="group relative">
                 <a href="/blog/{post.slug}" class="block">
                     <div class="flex flex-col md:flex-row md:items-baseline md:gap-8 mb-2">
-                        <h2 class="font-serif text-2xl text-parchment group-hover:text-moonlight transition-colors duration-300">
+                        <h2 class="font-serif text-xl md:text-2xl text-parchment group-hover:text-moonlight transition-colors duration-300">
                             {post.title}
                         </h2>
-                        <time class="font-sans text-xs tracking-widest opacity-40 uppercase shrink-0">
+                        <time class="font-sans text-[10px] md:text-xs tracking-widest opacity-40 uppercase shrink-0 mt-1 md:mt-0">
                             {post.date}
                         </time>
                     </div>
