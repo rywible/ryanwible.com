@@ -2,41 +2,58 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --color-midnight: #0a0b10;
-  --color-parchment: #e5e5e5;
-  --color-moonlight: #7a8c9e;
-  
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Inter", sans-serif;
+	--color-midnight: #0a0b10;
+	--color-parchment: #e5e5e5;
+	--color-moonlight: #7a8c9e;
+
+	--font-serif: 'Cormorant Garamond', serif;
+	--font-sans: 'Inter', sans-serif;
 }
 
 :root {
-  color-scheme: dark;
+	color-scheme: dark;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-midnight);
-  color: var(--color-parchment);
-  font-family: var(--font-sans);
-  font-weight: 300;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-midnight);
+	color: var(--color-parchment);
+	font-family: var(--font-sans);
+	font-weight: 300;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: 0.02em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-serif);
+	font-weight: 400;
+	letter-spacing: 0.02em;
 }
 
 /* Custom Selection Color */
 ::selection {
-  background-color: var(--color-moonlight);
-  color: var(--color-midnight);
+	background-color: var(--color-moonlight);
+	color: var(--color-midnight);
 }
 
 /* Smooth scrolling for anchor links */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+.mask-fade-bottom {
+	mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }

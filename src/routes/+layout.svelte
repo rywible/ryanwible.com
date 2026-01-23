@@ -8,11 +8,16 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed for Ryan Wible" href="/rss.xml" />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="RSS Feed for Ryan Wible"
+		href="/rss.xml"
+	/>
 </svelte:head>
 
 <div
-	class="flex h-screen w-full flex-col overflow-hidden selection:bg-moonlight selection:text-midnight"
+	class="flex h-dvh w-full flex-col overflow-hidden selection:bg-moonlight selection:text-midnight"
 >
 	<!-- Header -->
 	<div class="mx-auto w-full max-w-3xl flex-none px-6 md:px-12">
@@ -63,7 +68,7 @@
 	</div>
 
 	<main
-		class="relative mx-auto flex w-full max-w-3xl flex-1 flex-col overflow-hidden px-6 md:px-12 {$page
+		class="relative mx-auto flex min-h-0 w-full max-w-3xl flex-1 flex-col overflow-hidden px-6 md:px-12 {$page
 			.url.pathname === '/'
 			? 'fade-in'
 			: 'fade-in-up'}"
