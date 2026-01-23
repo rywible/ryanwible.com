@@ -31,7 +31,7 @@ make_moby_swim()
 
 Wrela is an indented language. I've always loved the flow of writing in Python, and I like that readability is coupled to scope. As you nest deeper and deeper, the code becomes uglier and uglier to look at. It's a good hint for refactoring.
 
-There's another more aesthetic reason that I can't explain to machines (and a non-zero percentage of devs): indented languages look lovely. Negative space is beautiful. The code I write can borrow from domains like poetry that use negative space to create emotional resonance beyond the words themselves.
+There's another more aesthetic reason I love indentation that I can't explain to machines (and a non-zero percentage of devs): indented languages look lovely. Negative space is beautiful. The code I write can borrow from domains like poetry that use negative space to create emotional resonance beyond the words themselves.
 
 There are some functional things going on here as well. In the object oriented languages I'm most familiar with, there is a fundamental break between how we think, write, and read about objects in English, versus how we think, write, and read about objects in code.
 
