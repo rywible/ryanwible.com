@@ -49,7 +49,7 @@ There are some nice things going on here (I do generally enjoy writing Python). 
 
 Here's something though: If you were to read this in English, what would it read like? I would read it something like: "A class named Whale. To initialize, pass in 'name' which is a string. Self(?)'s name is a string. Oh swim is defined and takes a distance parameter. Swim can print out self(?).name and the passed in distance."
 
-Pretty clear. But what is self? It's not *myself*. I'm not in the code. Oh, it's Whale's self. OK. In English, grammatically when we are the subject and we are examining an object, we do not use the word self. Self is a subject word referring to the observer. The Whale cannot observe itself, so why is it self-referential? From a scope standpoint, this can make sense if you squint. "Self" is from the perspective of the scope. The scope's "self" is what we're calling. But that requires us to keep two subjects in our head: us as the reader of the code, and the scope as the observer of its own class. Weird.
+Pretty clear. But what is self? It's not *myself*. I'm not in the code. Oh, it's Whale's self. OK. But in English, grammatically, when we are the subject and we are examining an object, we do not use the word self. Self is a subject word referring to the observer. The Whale cannot observe itself, so why is it self-referential? From a scope standpoint, this can make sense if you squint. "Self" is from the perspective of the scope. The scope's "self" is what we're calling. But that requires us to keep two subjects in our head: us as the reader of the code, and the scope as the observer of its own class. Weird.
 
 Wrela flips this around and tries to eliminate the impedance mismatch of dueling subjects. If we treat declarations as specs meant for the reader of the code, then the grammatically correct word becomes clear. A code "class" is not a human or a plurality of beings, it is an "it". So if we read the Wrela class spec, it reads as: "A Whale has an attribute called name that is a string. It can swim if passed distance which is a Number. swim prints out a message with 'its' name and the distance swim was given."
 
@@ -88,8 +88,8 @@ order.place()
 Immediately, my spidey senses tingle. "Order can place..." But orders can't place! Well, maybe this means that my domain modelling is incorrect. Perhaps a pure function or a higher order class that wraps Order is a more accurate way to represent our spec. What if we wrote it like?:
 ```
 to place_order():
-  order = Order()
-  # do whatever we do to place orders
+    order = Order()
+    # do whatever we do to place orders
 ```
 
 This is a dumb example, but as domain models become more complicated, clarification of the spec is very important to retain business logic comprehension and proper modelling of invariants. I like that the language grammatically nudges you to think about the objects you are modelling as having ownership of their behaviors. When the language's grammar pushes back, it can reveal modeling mistakes earlier that might save you from a costly refactor later.
