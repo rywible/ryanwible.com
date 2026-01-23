@@ -38,10 +38,10 @@ There are some functional things going on here as well. In the object oriented l
 For example, consider how we would write our Whale class in Python:
 ```
 class Whale:
-    def __init__(self, name: String):
+    def __init__(self, name: str):
         self.name = name
     
-    def swim(distance: Int) -> None:
+    def swim(distance: int) -> None:
         print(f"Hi! My name is {self.name} and I can swim {distance.toString()}")
 ```
 
