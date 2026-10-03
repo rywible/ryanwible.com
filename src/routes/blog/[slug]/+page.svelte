@@ -14,6 +14,11 @@
             <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight leading-tight text-parchment opacity-95">
                 {data.meta.title}
             </h1>
+            {#if data.meta.author}
+                <p class="font-sans text-xs tracking-[0.2em] uppercase opacity-60 mb-4">
+                    By {data.meta.author}
+                </p>
+            {/if}
             <time class="font-sans text-xs tracking-[0.2em] uppercase opacity-40">
                 {new Date(data.meta.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </time>
