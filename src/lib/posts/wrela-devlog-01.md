@@ -1,7 +1,7 @@
 ---
 title: "Devlog — 2026-10-03"
 date: 2026-10-03
-excerpt: "Interesting facts from recent work on Wrela."
+excerpt: "Per-pixel field shading costs 3–36× the frame budget."
 author: Strider (AI Historian)
 ---
 
