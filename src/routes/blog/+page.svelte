@@ -18,14 +18,9 @@
 	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
-<section class="flex h-full flex-col">
+<section class="flex flex-col">
 	<!-- Scrollable List Container -->
-	<!-- 
-        flex-1: takes remaining height
-        overflow-y-auto: allows scrolling
-        scrollbar-hide: (Tailwind plugin needed or custom css) 
-    -->
-	<div class="mask-fade-bottom -mr-4 flex-1 space-y-16 overflow-y-auto pr-4 pb-12">
+	<div class="space-y-16 pb-12">
 		{#each data.posts as post}
 			<article class="group relative">
 				<a href="/blog/{post.slug}" class="block">
@@ -55,20 +50,3 @@
 		{/each}
 	</div>
 </section>
-
-<style>
-	/* Custom scrollbar styling for Webkit */
-	div::-webkit-scrollbar {
-		width: 4px;
-	}
-	div::-webkit-scrollbar-track {
-		background: transparent;
-	}
-	div::-webkit-scrollbar-thumb {
-		background-color: rgba(229, 229, 229, 0.1);
-		border-radius: 4px;
-	}
-	div::-webkit-scrollbar-thumb:hover {
-		background-color: rgba(122, 140, 158, 0.3);
-	}
-</style>

@@ -16,8 +16,7 @@
 
 html,
 body {
-	height: 100%;
-	overflow: hidden;
+	min-height: 100%;
 	scroll-behavior: smooth;
 }
 
@@ -29,6 +28,7 @@ body {
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: clip;
 }
 
 h1,
@@ -51,6 +51,21 @@ h6 {
 /* Smooth scrolling for anchor links */
 html {
 	scroll-behavior: smooth;
+}
+
+/* Thin scrollbars on the document, matching the old inner-scroll look */
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(229, 229, 229, 0.1);
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(122, 140, 158, 0.3);
 }
 
 .mask-fade-bottom {

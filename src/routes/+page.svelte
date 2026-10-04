@@ -19,7 +19,7 @@
 	<meta name="description" content="Personal website and development blog of Ryan Wible." />
 </svelte:head>
 
-<section class="flex h-full flex-col items-center justify-center pb-9">
+<section class="flex flex-1 flex-col items-center justify-center pb-9">
 	<!-- The Temple Gate -->
 	<a href="/blog" class="group relative cursor-pointer" aria-label="Enter Archive">
 		<!-- Door Container with Perspective -->

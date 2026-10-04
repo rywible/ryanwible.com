@@ -17,10 +17,10 @@
 </svelte:head>
 
 <div
-	class="flex h-dvh w-full flex-col overflow-hidden selection:bg-moonlight selection:text-midnight"
+	class="flex min-h-dvh w-full flex-col selection:bg-moonlight selection:text-midnight"
 >
 	<!-- Header -->
-	<div class="mx-auto w-full max-w-3xl flex-none px-6 md:px-12">
+	<div class="sticky top-0 z-40 mx-auto w-full max-w-3xl flex-none bg-midnight px-6 md:px-12">
 		<header class="fade-in flex items-baseline justify-between py-6 md:py-12">
 			<a
 				href="/"
@@ -68,7 +68,7 @@
 	</div>
 
 	<main
-		class="relative mx-auto flex min-h-0 w-full max-w-3xl flex-1 flex-col overflow-hidden px-6 md:px-12 {$page
+		class="relative mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 md:px-12 {$page
 			.url.pathname === '/'
 			? 'fade-in'
 			: 'fade-in-up'}"

@@ -18,7 +18,7 @@
 </svelte:head>
 
 <!-- Wrapper to handle scrolling within the fixed layout -->
-<div class="h-full overflow-y-auto pr-2 -mr-2 pb-4 fade-in-up">
+<div class="pb-4 fade-in-up">
     <article class="mt-0 mb-4">
         <!-- Header -->
         <header class="mb-12 md:mb-16 text-center">
@@ -65,19 +65,4 @@
 		from { opacity: 0; transform: translateY(10px); }
 		to { opacity: 1; transform: translateY(0); }
 	}
-
-    /* Custom scrollbar styling for Webkit */
-    div::-webkit-scrollbar {
-        width: 4px;
-    }
-    div::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    div::-webkit-scrollbar-thumb {
-        background-color: rgba(229, 229, 229, 0.1);
-        border-radius: 4px;
-    }
-    div::-webkit-scrollbar-thumb:hover {
-        background-color: rgba(122, 140, 158, 0.3);
-    }
 </style>
