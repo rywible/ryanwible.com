@@ -1,9 +1,20 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import * as config from '$lib/config';
 	let { data } = $props();
 </script>
 
 <svelte:head>
 	<title>{data.meta.title} | Ryan Wible</title>
+	{#if data.meta.excerpt}
+		<meta name="description" content={data.meta.excerpt} />
+		<meta property="og:description" content={data.meta.excerpt} />
+	{/if}
+	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{config.url}/blog/{$page.params.slug}" />
+	<meta property="article:published_time" content={data.meta.date} />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <!-- Wrapper to handle scrolling within the fixed layout -->

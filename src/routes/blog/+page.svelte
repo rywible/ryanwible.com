@@ -4,6 +4,18 @@
 
 <svelte:head>
 	<title>Writing | Ryan Wible</title>
+	<meta
+		name="description"
+		content="Devlog and writing on Wrela, programming languages, and game development."
+	/>
+	<meta property="og:title" content="Writing | Ryan Wible" />
+	<meta
+		property="og:description"
+		content="Devlog and writing on Wrela, programming languages, and game development."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://ryanwible.com/blog" />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <section class="flex h-full flex-col">
